@@ -2,7 +2,7 @@ This file explains how the analysis (final, tidy) file is obtained via run_analy
 
 The run_analysis.R script works on the combined original train and test datasets (all stored in .txt files):  
     Measurements X_train, X_test  
-    Activivty	 y_train, y_test  
+    Activity	 y_train, y_test  
     Subject id	 subject_train,subject_test  
 
 The analysis script  
@@ -23,7 +23,7 @@ The analysis script
 2         0.2783732       -0.02056096    [snip]      -0.42759273            1         LAYING  
 3         0.2765553       -0.01786855    [snip]      -0.43124421            1         LAYING  
   
-                                                [snip]                                        
+                          [snip]                                        
     
   
 10297     0.2733874       -0.01701062    [snip]       0.04081119           30 WALKING_UPSTAIRS  
@@ -100,7 +100,7 @@ From a bird's eye viewpoint, we look at 50 observations for each measurement var
 49  1   LAYING         0.1804785       -0.04253566        -0.2805611  
 50  1   LAYING         0.2089642       -0.02274257        -0.1664494  
   
-Mean of 50 observations is calculated  
+Mean of 50 observations for subject 1, activity LAYING, is calculated:  
   
 id activity   tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z  
 1  1   LAYING         0.2215982       -0.04051395        -0.1132036  
@@ -178,7 +178,7 @@ fBodyBodyGyroMag-std()
 fBodyBodyGyroJerkMag-mean()  
 fBodyBodyGyroJerkMag-std()  
   
-Our final, tidy, sorted output therefore looks as follows:  
+Our final, tidy, sorted output therefore looks as follows (only first 3 variables are shown):  
   
   id           activity tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z  
 1   1             LAYING         0.2215982      -0.040513953        -0.1132036  
