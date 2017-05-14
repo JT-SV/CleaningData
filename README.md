@@ -18,7 +18,7 @@ The analysis script
    variable name header for further manipulation.  Variable names come from the features file.  
    The resulting data frame looks as follows (10299 rows, 563 columns):  
 
-      tBodyAcc-mean()-X      tBodyAcc-mean()-Y        angle(Z,gravityMean) id       activity  
+      tBodyAcc-mean()-X      tBodyAcc-mean()-Y [snip]angle(Z,gravityMean) id       activity  
 1         0.4034743       -0.01507440    [snip]      -0.43287564            1         LAYING  
 2         0.2783732       -0.02056096    [snip]      -0.42759273            1         LAYING  
 3         0.2765553       -0.01786855    [snip]      -0.43124421            1         LAYING  
