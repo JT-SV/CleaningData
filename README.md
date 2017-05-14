@@ -18,7 +18,7 @@ The analysis script
    variable name header for further manipulation.  Variable names come from the features file.  
    The resulting data frame looks as follows (10299 rows, 563 columns):  
 
-      tBodyAcc-mean()-X tBodyAcc-mean()-Y    	    angle(Z,gravityMean) id         activity  
+      tBodyAcc-mean()-X	     tBodyAcc-mean()-Y    	    angle(Z,gravityMean) id         activity  
 1             0.4034743       -0.01507440           	     -0.43287564  1           LAYING  
 2             0.2783732       -0.02056096    [snip]    	     -0.42759273  1           LAYING  
 3             0.2765553       -0.01786855          	     -0.43124421  1           LAYING  
@@ -33,29 +33,29 @@ The analysis script
 4) The data is refined by identifying columns that contain mean() and std() in their names and extracting them along with the id and activity colum. The resulting dataframe is now 10299 rows, 68 columns (The process "Extracts only the measurements on the mean and standard deviation for each measurement." I have taken this to imply variables with mean() and std() and not variables like angle(Z,gravityMean). These could also be included if desired.  
 
 5) The dataset is reshaped for later grouping via melt (here we display only one variable tBodyAcc-mean()):  
-       id activity          variable     value  
-1    1   LAYING tBodyAcc-mean()-X 0.4034743  
-2    1   LAYING tBodyAcc-mean()-X 0.2783732  
-3    1   LAYING tBodyAcc-mean()-X 0.2765553  
+   id  activity	  variable     	     value  
+   1   LAYING	  tBodyAcc-mean()-X  0.4034743	
+   1   LAYING	  tBodyAcc-mean()-X  0.2783732	
+   1   LAYING	  tBodyAcc-mean()-X  0.2765553	
   
      [snip]  
   
-50   1   LAYING tBodyAcc-mean()-X 0.2089642  
-51   1  SITTING tBodyAcc-mean()-X 0.1445040  
-52   1  SITTING tBodyAcc-mean()-X 0.2872516  
-53   1  SITTING tBodyAcc-mean()-X 0.2799976  
+  1	LAYING	tBodyAcc-mean()-X	0.2089642  
+  1	SITTING	tBodyAcc-mean()-X	0.1445040  
+  1	SITTING	tBodyAcc-mean()-X	0.2872516  
+  1	SITTING	tBodyAcc-mean()-X	0.2799976  
   
      [snip]  
   
-350  2   LAYING tBodyAcc-mean()-X 0.2856799  
-351  2   LAYING tBodyAcc-mean()-X 0.2720590  
-352  2   LAYING tBodyAcc-mean()-X 0.2763197  
+  2   LAYING	tBodyAcc-mean()-X 0.2856799  
+  2   LAYING 	tBodyAcc-mean()-X 0.2720590  
+  2   LAYING 	tBodyAcc-mean()-X 0.2763197  
   
      [snip]  
   
-450  2 STANDING tBodyAcc-mean()-X 0.2725287  
-451  2 STANDING tBodyAcc-mean()-X 0.2757457  
-452  2 STANDING tBodyAcc-mean()-X 0.2785959  
+  2	STANDING tBodyAcc-mean()-X 0.2725287  
+  2 	STANDING tBodyAcc-mean()-X 0.2757457  
+  2 	STANDING tBodyAcc-mean()-X 0.2785959  
   
 6) This data is grouped via aggregate. Note how we only have  
    one observation per subject id/activity now.  
@@ -99,7 +99,7 @@ From a bird's eye viewpoint, we look at 50 observations for each measurement var
 49  1   LAYING         0.1804785       -0.04253566        -0.2805611  
 50  1   LAYING         0.2089642       -0.02274257        -0.1664494  
   
-Mean of 50 obser -->   ^^^^^^^^^       ^^^^^^^^^^^	  ^^^^^^^^^^  
+Mean of 50 observations is calculated
   
 id activity   tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z  
 1  1   LAYING         0.2215982       -0.04051395        -0.1132036  
