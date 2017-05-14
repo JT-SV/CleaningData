@@ -18,17 +18,17 @@ The analysis script
    variable name header for further manipulation.  Variable names come from the features file.  
    The resulting data frame looks as follows (10299 rows, 563 columns):  
 
-      tBodyAcc-mean()-X	     tBodyAcc-mean()-Y		    angle(Z,gravityMean) id	    activity  
-1	      0.4034743	      -0.01507440		     -0.43287564  1	      LAYING  
-2	      0.2783732	      -0.02056096    [snip]	     -0.42759273  1	      LAYING  
-3	      0.2765553	      -0.01786855		     -0.43124421  1	      LAYING  
+      tBodyAcc-mean()-X      tBodyAcc-mean()-Y        angle(Z,gravityMean) id       activity  
+1         0.4034743       -0.01507440    [snip]      -0.43287564            1         LAYING  
+2         0.2783732       -0.02056096    [snip]      -0.42759273            1         LAYING  
+3         0.2765553       -0.01786855    [snip]      -0.43124421            1         LAYING  
   
-		[snip]	
-	
+                                                [snip]                                        
+    
   
-10297	      0.2733874	      -0.01701062		      0.04081119 30 WALKING_UPSTAIRS  
-10298	      0.2896542	      -0.01884304    [snip]	      0.02533948 30 WALKING_UPSTAIRS  
-10299	      0.3515035	      -0.01242312		      0.03669484 30 WALKING_UPSTAIRS  
+10297     0.2733874       -0.01701062    [snip]       0.04081119           30 WALKING_UPSTAIRS  
+10298     0.2896542       -0.01884304    [snip]       0.02533948           30 WALKING_UPSTAIRS  
+10299     0.3515035       -0.01242312    [snip]       0.03669484           30 WALKING_UPSTAIRS  
   
 4) The data is refined by identifying columns that contain mean() and std() in their names and extracting them along with the id and activity colum. The resulting dataframe is now 10299 rows, 68 columns (The process "Extracts only the measurements on the mean and standard deviation for each measurement." I have taken this to imply variables with mean() and std() and not variables like angle(Z,gravityMean). These could also be included if desired.  
 
@@ -37,7 +37,7 @@ The analysis script
 
   1	LAYING	tBodyAcc-mean()-X	0.4034743  
   1	SITTING	tBodyAcc-mean()-X	0.2783732  
-  1	SITTING	tBodyAcc-mean()-X	0.2765553
+  1	SITTING	tBodyAcc-mean()-X	0.2765553  
 
      [snip]  
 
@@ -78,9 +78,9 @@ The analysis script
 450 30         STANDING tBodyAcc-mean()-Z -0.10875621  
 451  1          WALKING tBodyAcc-mean()-Z -0.11114810  
 452  2          WALKING tBodyAcc-mean()-Z -0.10550036  
-     
-7) This data is finally reshaped into its original one-measurement-per-column format via dcast.  
   
+7) This data is finally reshaped into its original one-measurement-per-column format via dcast.  
+    
 From a bird's eye viewpoint, we look at 50 observations for each measurement variable for subject 1 for the LAYING activity.  Each observation point "is a mean or standard deviation of measurements" (in the course project vocabulary). The analysis process will further summarize these by taking the means.  
   
   id activity tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z  
@@ -100,7 +100,7 @@ From a bird's eye viewpoint, we look at 50 observations for each measurement var
 49  1   LAYING         0.1804785       -0.04253566        -0.2805611  
 50  1   LAYING         0.2089642       -0.02274257        -0.1664494  
   
-Mean of 50 observations is calculated
+Mean of 50 observations is calculated  
   
 id activity   tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z  
 1  1   LAYING         0.2215982       -0.04051395        -0.1132036  
@@ -108,7 +108,7 @@ id activity   tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z
 So the final output is the mean of means, or the mean of standard deviations.  
   
 The final summary  variables lablelled like their original source data except that the interpreation is different.  They are now means of means and means of standard deviations, obtained as described above:  
-
+  
 id  
 activity  
 tBodyAcc-mean()-X  
