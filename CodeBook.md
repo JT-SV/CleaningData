@@ -1,6 +1,6 @@
 # Feature Selection 
 
-The TidyData.txt data file contains a summary per subject/activity of the original database, which is described below. Only measurements which are labelled as calculated mean or std deviation (mean(),std()) are summarized by taking their means (for each subject/activity combination). Therefore the units remain the same.  The original description applies, though the set of variables is reduced/restricted to mean() and std() variables.
+The TidyData.txt data file contains a summary per subject/activity of the original database, which is described below. Only measurements which are labelled as calculated mean or std deviation (mean(),std()) are summarized by taking their means (for each subject/activity combination). Therefore the units remain the same.  The original description applies, though the set of variables is reduced/restricted to means of mean() and std() variables.
 
 ## Original description
 
@@ -13,23 +13,23 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+tBodyAcc-XYZ  
+tGravityAcc-XYZ  
+tBodyAccJerk-XYZ  
+tBodyGyro-XYZ  
+tBodyGyroJerk-XYZ  
+tBodyAccMag  
+tGravityAccMag  
+tBodyAccJerkMag  
+tBodyGyroMag  
+tBodyGyroJerkMag  
+fBodyAcc-XYZ  
+fBodyAccJerk-XYZ  
+fBodyGyro-XYZ  
+fBodyAccMag  
+fBodyAccJerkMag  
+fBodyGyroMag  
+fBodyGyroJerkMag  
 
 ## Our analysis
 
